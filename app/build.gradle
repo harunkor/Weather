@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -33,6 +35,9 @@ android {
 
 dependencies {
     def lottieVersion = '5.0.3'
+    def hilt_version = '2.42'
+    def retrofit_vesion = '2.9.0'
+    def ktx_version = '1.4.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -44,4 +49,17 @@ dependencies {
 
     //Lottie
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_vesion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_vesion"
+    //ViewModel
+    implementation "androidx.activity:activity-ktx:$ktx_version"
+
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+
 }

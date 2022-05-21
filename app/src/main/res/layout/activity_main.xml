@@ -46,7 +46,31 @@
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
-    
+
+
+    <ImageView
+        android:id="@+id/bottomimage3"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="12dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom_shape" />
+
+    <ImageView
+        android:id="@+id/bottomimage2"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="6dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom_shape" />
 
     <ImageView
         android:id="@+id/bottomimage"
@@ -56,4 +80,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/bottom_shape" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

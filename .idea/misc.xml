@@ -5,7 +5,8 @@
       <map>
         <entry key="app/src/main/res/drawable/bottom_shape.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.124" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/ic_cloud_bolt_rain.xml" value="0.232" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.19610507246376813" />
       </map>
     </option>
