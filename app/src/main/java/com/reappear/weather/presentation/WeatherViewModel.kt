@@ -1,20 +1,38 @@
-package com.reappear.androidcleanarchitecturemvvmbasicsample.presentation
+package com.reappear.weather.presentation
 
+import android.location.Location
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.reappear.androidcleanarchitecturemvvmbasicsample.domain.model.WeatherModel
-import com.reappear.androidcleanarchitecturemvvmbasicsample.domain.usecase.WeatherUseCase
-import com.reappear.weather.utils.Constants.Companion.KEY_API
+import com.reappear.weather.domain.model.WeatherModel
+import com.reappear.weather.domain.usecase.LocationUsecase
+import com.reappear.weather.domain.usecase.WeatherUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class WeatherViewModel @Inject constructor(private val useCase: WeatherUseCase):ViewModel() {
+class WeatherViewModel @Inject constructor(
+    private val weatherUseCase: WeatherUseCase,
+    private val locationUsecase: LocationUsecase
+) : ViewModel() {
 
-    fun getWeather(city:String): LiveData<WeatherModel> {
-        useCase.getWeather(city)
-        return useCase.getCurrenWeather
+    val location:LiveData<Location>
+
+    init {
+        location = locationUsecase.getLocation
+    }
+
+    fun getWeather(city: String): LiveData<WeatherModel> {
+        weatherUseCase.getWeather(city)
+        return weatherUseCase.getCurrenWeather
+    }
+
+    fun getLatLonWeather(lat: String, lon: String): LiveData<WeatherModel> {
+        weatherUseCase.getLatLonWeather(lat, lon)
+        return weatherUseCase.getCurrenWeather
+    }
+
+    fun getLastKnownLocation() {
+        locationUsecase.getLastLocation()
     }
 
 }

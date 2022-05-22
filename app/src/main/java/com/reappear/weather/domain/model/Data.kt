@@ -1,4 +1,4 @@
-package com.reappear.androidcleanarchitecturemvvmbasicsample.domain.model
+package com.reappear.weather.domain.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

@@ -1,12 +1,12 @@
-package com.reappear.androidcleanarchitecturemvvmbasicsample.domain.repository
+package com.reappear.weather.domain.repository
 
-import androidx.lifecycle.MutableLiveData
-import com.reappear.androidcleanarchitecturemvvmbasicsample.domain.model.WeatherModel
+import com.reappear.weather.domain.model.WeatherModel
 import retrofit2.Call
 
 interface WeatherRepository {
 
-    fun getCurrent(city: String, key:String) : Call<WeatherModel>
+    fun getCurrent(city: String, key: String): Call<WeatherModel>
+    fun getLatLon(lat: String, lon: String, key: String): Call<WeatherModel>
 
 }
 
